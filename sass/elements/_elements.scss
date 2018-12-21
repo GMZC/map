@@ -1,0 +1,88 @@
+html {
+	box-sizing: border-box;
+}
+
+html,body {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	color: $color__text-main;
+}
+.price{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+			-ms-flex-pack: center;
+					justify-content: center;
+	-webkit-box-align: center;
+			-ms-flex-align: center;
+					align-items: center;
+	width: 50px;
+	height: 50px;
+	background: $color__background-body;;
+	color: $color__text-main;
+	border: 1px solid $color__text-main;
+	border-radius: 50px;
+	padding : 0;
+	font-family: $font__helvetica__cb;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.site{
+	width: 100%;
+}
+
+p,
+span{
+	font-family: $font__archer__m;
+}
+
+p{
+	a{
+		color: royalblue;
+		text-decoration: none;
+		&:visited{
+		}
+	}
+}
+
+
+
+
+.content-area{
+	// padding-top: 5rem;
+	// max-width: 1200px;
+	margin: 0 auto;
+}
+
+.entry-content{
+	padding: 0 12rem 0  0;
+	margin: 0 0 0 3rem;
+}
+
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";

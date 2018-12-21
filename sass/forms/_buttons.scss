@@ -1,0 +1,63 @@
+%btn{
+	background: $color__text-main;
+	font-family: 'Archer Sbold', 'Georgia', serif;
+	text-decoration: none;
+	color: $color__background-body !important;
+	padding: 1rem;
+	margin: 0 2rem;
+	z-index: auto;
+	display: inline-block !important;
+	position: relative;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+	&:before{
+		content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color__text-main;
+		background: $color__background-body;
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    left: 4%;
+    transition: all 0.5s ease-in-out;
+}
+	&:hover{
+		color: $color__text-main !important;
+		background: rgba(255,255,255,.0);
+		transition : all .5s ease-in-out;
+		&:before{
+			top: 0;
+			left: 0;
+			transition : all .5s ease-in-out;
+		}
+	}
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	&.btn{
+		@extend %btn;	
+	}
+
+	&.big{
+		font-size: 30px;
+	}
+	&.med{
+		font-size: 22px;
+	}
+	&.small{
+		font-size: 17px;
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+		outline: none;
+	}
+}
+
+button.hamburger:before{
+	border: none;
+}

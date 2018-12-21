@@ -1,0 +1,30 @@
+ul, ol {
+	margin: 0 0;
+	padding: 0;
+	font-family: $font__archer__m;
+	a{
+		text-decoration: none;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 ;
+}

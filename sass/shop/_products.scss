@@ -1,0 +1,218 @@
+/**
+ * Products
+ */
+ %btn{
+   background: $color__text-main;
+   font-family: 'Archer Sbold', 'Georgia', serif;
+   text-decoration: none;
+   color: $color__background-body;
+   padding: 1rem;
+   margin: 0 2rem;
+   z-index: 10;
+   position: relative;
+   text-align: center;
+   transition: all 0.5s ease-in-out;
+   border: 1px solid $color__background-body;
+
+   &:hover{
+     color: $color__text-main;
+     border: 1px solid $color__text-main;
+     background: rgba(255,255,255,.0);
+     transition : all .5s ease-in-out;
+
+   }
+}
+
+ul.products {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+
+	li.product {
+    list-style: none;
+    position: relative;
+    margin-bottom: 2em;
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+
+		a{
+			color: $color__text-main;
+			text-decoration: none;
+      margin: 0 0 1rem 0;
+
+      h3 {
+        padding: 0 2rem;
+        margin: 0 0 0rem 0;
+      }
+		}
+
+		.onsale{
+			padding: 1rem;
+			background: $color__background-body;
+			color: $color__text-main;
+			font-family: $font__archer__b;
+			position: absolute;
+      border: 1px solid $color__text-main;
+			top: 10px;
+			right: -10px;
+			// box-shadow: -3px 3px 3px 0px rgba(0, 0, 0, .5);
+			&:after{
+				content: '';
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				bottom: -10px;
+				right: 0;
+				border-left: 5px solid $color__text-main;
+				border-top: 5px solid $color__text-main;
+				border-bottom: 5px solid transparent;
+				border-right: 5px solid transparent;
+			}
+		}
+    .price{
+      margin:  0 0 1rem 0;
+      span{
+        font-family: $font__helvetica__cb;
+      }
+    }
+
+		img {
+			display: block;
+      margin: 0 0 2rem 0;
+      width: 100%;
+		}
+
+    h2{
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    p{
+      margin: .5rem 0 1rem 0;
+    }
+
+		.button {
+			@extend %btn;
+		}
+	}
+}
+
+@media screen and (min-width: 48em) {
+	ul.products {
+		li.product {
+			@include column-width(3);
+			// float: left;
+			// margin-right: $columns__margin;
+
+			&.first {
+				clear: both;
+			}
+
+			&.last {
+				// margin-right: 0;
+			}
+		}
+	}
+
+	.columns-1 {
+		ul.products {
+			li.product {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
+	@for $i from 2 through 6 {
+		.columns-#{$i} {
+			ul.products {
+				li.product {
+					@include column-width( $i );
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+
+  ul.products {
+  	display: flex;
+    flex-flow: column wrap;
+  	margin: 0 auto;
+  	max-width: 960px;
+  	align-items: center;
+  	text-align: center;
+
+  	li.product {
+  		list-style: none;
+  		position: relative;
+  		margin-bottom: 2em;
+  		padding: 2rem 0 ;
+  		display: flex;
+  		flex-flow: column;
+  		background: $color__background-body;
+  		border: 1px solid $color__background-hr;
+      width: 90%;
+
+  		a{
+  			color: $color__text-main;
+  			text-decoration: none;
+
+        h3 {
+          padding: 0 2rem;
+          margin: 0 0 0rem 0;
+        }
+  		}
+
+  		.onsale{
+  			padding: 1rem;
+  			background: $color__background-button;
+  			color: $color__text-main;
+  			font-family: $font__archer__b;
+  			position: absolute;
+  			top: 10px;
+  			right: -10px;
+  			box-shadow: -10px 3px 10px 0px rgba(0, 0, 0, .5);
+  			&:after{
+  				content: '';
+  				width: 0px;
+  				height: 0px;
+  				position: absolute;
+  				bottom: -10px;
+  				right: 0;
+  				border-left: 5px solid $color__text-main;
+  				border-top: 5px solid $color__text-main;
+  				border-bottom: 5px solid transparent;
+  				border-right: 5px solid transparent;
+  			}
+  		}
+      .price{
+        span{
+          font-family: $font__helvetica__cb;
+        }
+      }
+
+  		img {
+  			display: block;
+        margin: 0 0 2rem 0;
+  		}
+
+      p{
+        margin: .5rem 0 1rem 0;
+      }
+
+  		.button {
+  			@extend %btn;
+  		}
+  	}
+  }
+}

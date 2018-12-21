@@ -1,0 +1,1203 @@
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+
+}
+
+.home-content,
+.page-content{
+	margin : 6rem 0 0 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	.post-thumbnail{
+		-ms-flex-preferred-size: 75%;
+		    flex-basis: 75%;
+		height: 820px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		z-index: -1;
+	}
+	.entry-content{
+		padding: 2rem 8rem 2rem 2rem;
+		margin: 0 0 0 3rem;
+		position: absolute;
+		width: 50%;
+		right: 0;
+	}
+}
+
+.page-content{
+	.entry-content{
+		background: rgba(255,255,255,.8);
+	}
+}
+
+.last-issue-background{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.last-issue-background-overlay{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 640px;
+}
+.last-issue{
+	margin : 0 auto;
+	padding: 6rem 0;
+	width: 960px;
+	z-index: 1;
+	.last-issue-edito{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		.last-issue-content{
+			-ms-flex-preferred-size: 75%;
+			    flex-basis: 75%;
+			padding: 0 5rem 0 0;
+		}
+		.last-issue-add-to-cart{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			    justify-content: space-around;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-ms-flex-preferred-size: 40%;
+			    flex-basis: 40%;
+			.last-issue-price{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				width: 50px;
+				height: 50px;
+				background: $color__background-body;;
+				color: $color__text-main;
+				border: 1px solid $color__text-main;
+				border-radius: 50px;
+				padding : 0;
+				font-family: $font__helvetica__cb;
+			}
+		}
+	}
+}
+
+.last-issue-map{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 520px;
+	border-bottom: 5px double $color__text-main;
+	&:last-child{
+		border-bottom: none;
+	}
+	.map-image{
+		-ms-flex-preferred-size: 75%;
+		    flex-basis: 75%;
+		max-width: 720px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	.map-content{
+		-ms-flex-preferred-size: 40%;
+		    flex-basis: 40%;
+		padding: 2em;
+	}
+}
+
+.summary{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+
+
+	div{
+		border-right: 1px solid $color__background-hr;
+		-ms-flex-preferred-size: 260px;
+		    flex-basis: 260px;
+		padding : 0 1rem;
+		h5{
+			color: #666;
+			margin: 0;
+		}
+		h4{
+			margin-top: .5rem;
+		}
+		blockquote{
+			margin: 0;
+			font-size: .7rem;
+		}
+		strong{
+			font-size: 24px;
+			font-family: $font__main;
+		}
+		&:last-of-type{
+			border : none;
+			padding : 0 0 0 1rem;
+		}
+		&:first-of-type{
+			padding : 0 1rem 0 0;
+		}
+	}
+}
+
+.numero_du_mois{
+	padding-top: 8rem;
+	.sommaire{
+		margin:0 auto;
+		width: 100%;
+		max-width: 1200px;
+		padding-bottom: 5rem;
+		.titre-separateur{
+			margin: 0;
+			padding: 0;
+		}
+		.summary{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+				p{
+					border-right: 1px solid $color__background-hr;
+					-ms-flex-preferred-size: 200px;
+					    flex-basis: 200px;
+					padding : 0 2rem;
+					strong{
+						font-size: 24px;
+						font-family: $font__main;
+					}
+					&:last-of-type{
+						border : none;
+						padding : 0 0 0 2rem;
+					}
+					&:first-of-type{
+						padding : 0 2rem 0 0;
+					}
+				}
+		}
+	}
+	.intro-numero{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin:0 auto;
+		width: 100%;
+		// max-width: 1200px;
+		div{
+			-ms-flex-preferred-size: 50%;
+			    flex-basis: 50%;
+		}
+		.left-container{
+
+		}
+		.post-thumbnail{
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			position: relative;
+			.image-content{
+				margin: 0 1rem 0 0;
+				position: absolute;
+		    width: 100%;
+		    height: 100%;
+				.last-issue-price{
+					position: absolute;
+					right: -35px;
+					bottom:5px;
+					display: inline-flex;
+					-webkit-box-pack: center;
+							-ms-flex-pack: center;
+									justify-content: center;
+					-webkit-box-align: center;
+							-ms-flex-align: center;
+									align-items: center;
+					width: 70px;
+					height: 70px;
+					background: $color__background-body;;
+					color: $color__text-main;
+					border: 1px solid $color__text-main;
+					border-radius: 50px;
+					padding : 0;
+					font-family: $font__helvetica__cb;
+
+				}
+			}
+		}
+
+		.content{
+			padding : 0 0 0 3rem;
+			max-width: 600px;
+			h2{
+				font-size: 20px;
+			  margin: 0rem 0 1rem 0rem;
+				padding: 0 1rem;
+			  background: $color__text-main;
+			  display: inline-block;
+			  color: $color__background-body;
+			}
+
+		}
+	}
+
+
+
+	.entry-content{
+		padding: 0;
+		.last-issue-map{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			height: auto;
+			.map-image{
+				-ms-flex-preferred-size: 50%;
+				    flex-basis: 50%;
+				max-width: 50%;
+			}
+			.map-content{
+				-ms-flex-preferred-size: 50%;
+				    flex-basis: 50%;
+				padding: 5rem 2rem;
+			}
+		}
+		.issue-artist{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
+			-webkit-box-align: start;
+			    -ms-flex-align: start;
+			        align-items: flex-start;
+			div{
+
+			}
+			.image-container{
+				width: 250px;
+				height: 250px;
+				position: relative;
+				margin: 0 2rem 0 0;
+			}
+			.artist-image{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+			.artist-info{
+				-ms-flex-preferred-size: 50%;
+				    flex-basis: 50%;
+				margin: 0 0 3rem 0;
+				h3{
+					margin: 0;
+				}
+			}
+
+		}
+	}
+}
+
+.list{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient : vertical;
+	-webkit-box-direction : normal;
+	    -ms-flex-flow : column wrap;
+	        flex-flow : column wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 5rem;
+}
+
+.list-content{
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-orient : horizontal;
+	-webkit-box-direction : normal;
+	    -ms-flex-flow : row;
+	        flex-flow : row;
+	margin: 0 0 5rem 0;
+	padding: 0;
+	.image{
+		margin: 0 1rem 0 0;
+		position: relative;
+		.last-issue-price{
+			position: absolute;
+			right: -35px;
+			bottom:5px;
+			display: inline-flex;
+			-webkit-box-pack: center;
+					-ms-flex-pack: center;
+							justify-content: center;
+			-webkit-box-align: center;
+					-ms-flex-align: center;
+							align-items: center;
+			width: 70px;
+			height: 70px;
+			background: $color__background-body;;
+			color: $color__text-main;
+			border: 1px solid $color__text-main;
+			border-radius: 50px;
+			padding : 0;
+			font-family: $font__helvetica__cb;
+
+		}
+		div{
+			width: 540px;
+			height: 100%;
+		}
+	}
+
+	.texte{
+		h2{
+			a{
+				text-decoration: none;
+				color: $color__text-main;
+				border : 1px solid $color__background-body;
+				transition: all .3s ease-in-out;
+				&:hover{
+					border-bottom: 1px solid $color__text-main;
+					// padding: 0 1rem;
+					transition: all .3s ease-in-out;
+				}
+			}
+		}
+		.issue-summary{
+			display: block;
+			h4{
+				background: none;
+				color: $color__text-main;
+				border-bottom: 1px solid $color__background-hr;
+				padding: .5rem 0;
+				margin : 0 0 1rem 0;
+				display: block;
+			}
+			ul{
+				padding: 0 0 0 1rem;
+				li{
+					padding: 0 0 .5rem 0;
+				}
+			}
+		}
+		h4{
+			font-family: $font__helvetica__cb;
+			padding: .5rem;
+			background: $color__text-main;
+			color: $color__background-body;
+			margin: 0;
+			display: inline-block;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+	}
+
+	.carto{
+		margin : 1rem 0 3rem 0;
+	}
+
+	.last-issue-price{
+		display: inline-flex;
+		-webkit-box-pack: center;
+				-ms-flex-pack: center;
+						justify-content: center;
+		-webkit-box-align: center;
+				-ms-flex-align: center;
+						align-items: center;
+		width: 50px;
+		height: 50px;
+		background: $color__background-body;;
+		color: $color__text-main;
+		border: 1px solid $color__text-main;
+		border-radius: 50px;
+		padding : 0;
+		font-family: $font__helvetica__cb;
+	}
+}
+
+
+
+.alt-content{
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	div{
+		max-width: 960px;
+		width: 100%;
+		padding: 2rem 0;
+	}
+}
+
+.page-id-2621{
+	ul.products{
+		li.product{
+			max-width: 22%;
+			padding: 0 0 2rem 0;
+		.image{
+			height: 260px;
+			position: relative;
+			width: 100%;
+
+			div.popUp{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+
+				div.popUpContent{
+					position: absolute;
+					z-index: -1;
+					width: 150%;
+					height: auto;
+					bottom: 0rem;
+					background : rgba(255,255,255,.5);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					opacity: 0;
+					transition: all .3s ease-in-out;
+					.texte{
+						padding: 1rem;
+						width: 100%;
+						height: auto;
+						position: relative;
+						display: block;
+						text-align: left;
+						background: $color__background-body;
+						border: 5px double $color__text-main;
+						.issue-summary{
+							display: block;
+							h4{
+								background: none;
+								color: $color__text-main;
+								border-bottom: 1px solid $color__background-hr;
+								padding: .5rem 0;
+								margin : 0 0 1rem 0;
+								display: block;
+							}
+							ul{
+								padding: 0 0 0 1rem;
+								li{
+									padding: 0 0 .5rem 0;
+								}
+							}
+						}
+					}
+					h4{
+							font-family: $font__helvetica__cb;
+							padding: .5rem;
+							background: $color__text-main;
+							color: $color__background-body;
+							margin: 0;
+							display: inline-block;
+							letter-spacing: 2px;
+							text-transform: uppercase;
+							font-size: 14px;
+						}
+				}
+				&:hover{
+					div.popUpContent{
+						opacity: 1;
+						z-index: 100;
+						transition: all .3s ease-in-out;
+						bottom: -5rem;
+					}
+				}
+			}
+		}
+		a.btn{
+			margin:3rem 2rem 0 2rem;
+			border: 1px solid $color__text-main;
+			color: $color__background-body;
+			&:before{
+				display: none;
+			}
+			&:hover{
+				border: 1px solid $color__text-main;
+				color: $color__text-main;
+			}
+		}
+		.last-issue-price{
+			margin-bottom:-35px;
+			display: inline-flex;
+			-webkit-box-pack: center;
+					-ms-flex-pack: center;
+							justify-content: center;
+			-webkit-box-align: center;
+					-ms-flex-align: center;
+							align-items: center;
+			width: 70px;
+			height: 70px;
+			background: $color__background-body;;
+			color: $color__text-main;
+			border: 1px solid $color__text-main;
+			border-radius: 50px;
+			padding : 0;
+			font-family: $font__helvetica__cb;
+
+		}
+		}
+	}
+	.last-issue-map:nth-child(even){
+		flex-flow: row-reverse;
+	}
+}
+
+.numero_du_mois{
+	background: rgba(255,255,255,.6);
+	margin-top:5rem;
+
+}
+
+strong{
+font-family: 'Archer-Bold';
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+.boutique-abonnements{
+	.post-thumbnail{
+		height: 360px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+
+.entry-content{
+	h4{
+		font-family: $font__helvetica__cb;
+		padding: .5rem;
+		background: $color__text-main;
+		color: $color__background-body;
+		margin: 0;
+		display: inline-block;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+	h2{
+		a{
+			text-decoration: none;
+			color: $color__text-main;
+			transition: all .3s ease-in-out;
+			&:hover{
+				border-bottom: 1px solid $color__text-main;
+				// padding: 0 1rem;
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+	.issue-summary{
+		display: block;
+		h4{
+			background: none;
+			color: $color__text-main;
+			border-bottom: 1px solid $color__background-hr;
+			padding: .5rem 0;
+			margin : 0 0 1rem 0;
+			display: block;
+		}
+		ul{
+			padding: 0 0 0 1rem;
+			li{
+				padding: 0 0 .5rem 0;
+			}
+		}
+	}
+}
+
+.goodies{
+	.last-issue-map .map-image{
+		flex-basis: 50%;
+		max-width: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.portail-boutique{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 420px;
+	padding: 0;
+	div.abonnements,
+	div.boutique{
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		.text{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column wrap;
+		}
+		.icon{
+			width: 100px;
+			height: 100px;
+		}
+	}
+	.abonnements{
+		border-right: 1px solid $color__text-main;
+	}
+	.boutique{
+
+	}
+}
+
+.actusContainer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	max-width: 1200px;
+	margin : 0 auto;
+	padding: 5rem 0;
+
+	.actu{
+		width: 260px;
+		margin: 0 1rem;
+		word-wrap: break-word;
+		h3{
+			a{
+				text-decoration: none;
+				color: $color__text-main;
+				border : 1px solid $color__background-body;
+				transition: all .3s ease-in-out;
+				&:hover{
+					border-bottom: 1px solid $color__text-main;
+					// padding: 0 1rem;
+					transition: all .3s ease-in-out;
+				}
+			}
+		}
+		.actu_thumbnail{
+			height: 200px;
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+
+	.home-content,
+	.page-content{
+		margin : 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column wrap;
+		        flex-flow: column wrap;
+		.post-thumbnail{
+			height: 720px;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+		.entry-content{
+			padding: 2rem;
+			margin: 0 ;
+			position: relative;
+			width: 100%;
+
+		}
+	}
+	.last-issue-background-overlay{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	  -webkit-box-pack: center;
+	      -ms-flex-pack: center;
+	          justify-content: center;
+	  -webkit-box-align: center;
+	      -ms-flex-align: center;
+	          align-items: center;
+	  min-height: 720px;
+	}
+	.last-issue{
+		margin : 0 auto;
+		padding: 6rem 0;
+		max-width: 100%;
+		.last-issue-edito{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: start;
+			    -ms-flex-align: start;
+			        align-items: flex-start;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-flow: column wrap;
+			        flex-flow: column wrap;
+			padding : 0 2rem;
+			.last-issue-content{
+				padding: 0;
+			}
+			.last-issue-add-to-cart{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: start;
+				    -ms-flex-pack: start;
+				        justify-content: flex-start;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+
+				.last-issue-price{
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-pack: center;
+					    -ms-flex-pack: center;
+					        justify-content: center;
+					-webkit-box-align: center;
+					    -ms-flex-align: center;
+					        align-items: center;
+					width: 50px;
+					height: 50px;
+					background: $color__background-body;;
+					color: $color__text-main;
+					border: 1px solid $color__text-main;
+					border-radius: 50px;
+					padding : 0;
+					font-family: $font__helvetica__cb;
+				}
+			}
+		}
+	}
+
+	.last-issue-map{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column wrap;
+		        flex-flow: column wrap;
+		height: auto;
+		.map-image{
+			-ms-flex-preferred-size: auto;
+			    flex-basis: auto;
+			height: 320px;
+			width: 100%;
+		}
+		.map-content{
+			-ms-flex-preferred-size: 0;
+			    flex-basis: auto;
+			padding: 2em;
+		}
+	}
+
+	.summary{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column wrap;
+		        flex-flow: column wrap;
+
+		div{
+			border-bottom: 1px solid $color__background-hr;
+			border-right: 0;
+			-ms-flex-preferred-size: 0;
+			    flex-basis:auto;
+			padding : 2rem;
+			strong{
+				font-size: 24px;
+				font-family: $font__main;
+			}
+			&:last-of-type{
+				border : none;
+				padding :  2rem;
+			}
+			&:first-of-type{
+				padding :  2rem;
+			}
+		}
+	}
+
+	.portail-boutique{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		height: auto;
+		flex-flow: column wrap;
+		padding: 0;
+		div.abonnements,
+		div.boutique{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column wrap;
+			padding: 3rem;
+			.text{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column wrap;
+				.alt-content{
+					div{
+						padding: 0;
+						text-align: center;
+					}
+				}
+			}
+			.icon{
+				width: 100px;
+				height: 100px;
+			}
+		}
+		.abonnements{
+			border-bottom: 1px solid $color__text-main;
+			border-right: none;
+		}
+		.boutique{
+
+		}
+	}
+
+	.list{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient : vertical;
+		-webkit-box-direction : normal;
+		    -ms-flex-flow : column wrap;
+		        flex-flow : column wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+		margin-top: 5rem;
+	}
+
+	.list-content{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient : vertical;
+		-webkit-box-direction : normal;
+		    -ms-flex-flow : column wrap;
+		        flex-flow : column wrap;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		.image{
+			margin: 0;
+			div{
+				width: 100%;
+				height: 320px;
+			}
+		}
+
+		.texte{
+			h2{
+				a{
+					text-decoration: none;
+					color: $color__text-main;
+				}
+			}
+			.issue-summary{
+				display: block;
+				h4{
+					background: none;
+					color: $color__text-main;
+					border-bottom: 1px solid $color__background-hr;
+					padding: .5rem 0;
+					margin : 0 0 1rem 0;
+					display: block;
+				}
+				ul{
+					padding: 0 0 0 1rem;
+					li{
+						padding: 0 0 .5rem 0;
+					}
+				}
+			}
+			h4{
+				font-family: $font__helvetica__cb;
+				padding: .5rem;
+				background: $color__text-main;
+				color: $color__background-body;
+				margin: 0;
+				display: inline-block;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+		}
+		.last-issue-price{
+			display: inline-flex;
+			-webkit-box-pack: center;
+					-ms-flex-pack: center;
+							justify-content: center;
+			-webkit-box-align: center;
+					-ms-flex-align: center;
+							align-items: center;
+			width: 50px;
+			height: 50px;
+			background: $color__background-body;;
+			color: $color__text-main;
+			border: 1px solid $color__text-main;
+			border-radius: 50px;
+			padding : 0;
+			font-family: $font__helvetica__cb;
+		}
+	}
+
+	.numero_du_mois{
+		padding-top: 3rem;
+		.sommaire{
+			margin:0 auto;
+			width: 100%;
+			max-width: 1200px;
+			.titre-separateur{
+				margin: 0;
+				padding: 0;
+			}
+			.summary{
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-pack: center;
+					    -ms-flex-pack: center;
+					        justify-content: center;
+					p{
+						border-right: 1px solid $color__background-hr;
+						-ms-flex-preferred-size: auto;
+						    flex-basis: auto;
+						padding : 0 2rem;
+						strong{
+							font-size: 24px;
+							font-family: $font__main;
+						}
+						&:last-of-type{
+							border : none;
+							padding : 0 2rem;
+						}
+						&:first-of-type{
+							padding : 0 2rem;
+						}
+					}
+			}
+		}
+		.intro-numero{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-flow: column wrap;
+			        flex-flow: column wrap;
+			margin:0 auto;
+			width: 100%;
+			max-width: 1200px;
+			div{
+				-ms-flex-preferred-size: auto;
+				    flex-basis: auto;
+			}
+			.left-container{
+
+			}
+			.post-thumbnail{
+				height: 400px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				.image-content{
+					margin: 0 1rem 0 0;
+					position: relative;
+					.last-issue-price{
+						position: absolute;
+						right: -35px;
+						bottom:5px;
+						display: inline-flex;
+						-webkit-box-pack: center;
+								-ms-flex-pack: center;
+										justify-content: center;
+						-webkit-box-align: center;
+								-ms-flex-align: center;
+										align-items: center;
+						width: 70px;
+						height: 70px;
+						background: $color__background-body;;
+						color: $color__text-main;
+						border: 1px solid $color__text-main;
+						border-radius: 50px;
+						padding : 0;
+						font-family: $font__helvetica__cb;
+
+					}
+				}
+			}
+
+			.content{
+				padding : 0 ;
+				h2{
+					font-size: 20px;
+				}
+
+			}
+		}
+
+		.entry-content{
+			padding: 0;
+			.last-issue-map{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				height: auto;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-flow: column wrap;
+				        flex-flow: column wrap;
+				.map-image{
+					-ms-flex-preferred-size: 50%;
+					    flex-basis: 50%;
+					max-width: 100%;
+				}
+				.map-content{
+					-ms-flex-preferred-size: 50%;
+					    flex-basis: 50%;
+					padding: 5rem 2rem;
+				}
+			}
+			.issue-artist{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: start;
+				    -ms-flex-pack: start;
+				        justify-content: flex-start;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-flow: column wrap;
+				        flex-flow: column wrap;
+				div{
+
+				}
+				.image-container{
+					width: 250px;
+					height: 250px;
+					position: relative;
+					margin: 0 2rem 0 0;
+				}
+				.artist-image{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+				}
+				.artist-info{
+					-ms-flex-preferred-size: 50%;
+					    flex-basis: 50%;
+					margin: 0 0 3rem 0;
+					text-align: center;
+					h3{
+						margin : 0;
+					}
+				}
+
+			}
+		}
+	}
+
+}

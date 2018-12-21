@@ -1,0 +1,74 @@
+/**
+ * Shop tables
+ */
+table.shop_table_responsive {
+	thead {
+	}
+
+	tbody {
+		th {
+		}
+	}
+
+	tr {
+		td {
+
+			// &:before {
+			// 	content: attr(data-title) ': ';
+			// 	float: left;
+			// }
+
+			&.product-remove {
+				a {
+					text-align: left;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+
+			&.actions,
+			&.download-actions {
+				&:before {
+					display: none;
+				}
+			}
+
+			&.download-actions {
+				.button {
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	table.shop_table_responsive {
+		thead {
+			display: table-header-group;
+		}
+
+		tbody {
+			th {
+				display: table-cell;
+			}
+		}
+
+		tr {
+			th, td {
+				text-align: left;
+			}
+
+			td {
+				display: table-cell;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}

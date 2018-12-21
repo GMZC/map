@@ -1,0 +1,267 @@
+.woocommerce-notices-wrapper{
+	position: fixed;
+	top: 30%;
+	left: 0;
+	z-index: 1000;
+}
+
+/**
+ * Single Product
+ */
+.single-product {
+	.btn{
+		margin: 0;
+		cursor: pointer;
+	}
+	div.product {
+		position: relative;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		padding: 90px 0 0 0;
+		height: 960px;
+		.wc-summary.entry-summary{
+			margin-left: -10rem;
+			z-index: 1;
+			background: rgba(255,255,255,.8);
+			padding: 2rem;
+			p.price{
+				display: none;
+			}
+		}
+		.woocommerce-product-gallery {
+			position: relative;
+			width: 85%;
+			height: 100%;
+			padding : 0;
+			.gallery-trigger{
+				display: none;
+			}
+			figure{
+				margin: 0;
+				height: 100%;
+				.woocommerce-product-gallery__image{
+					height: 100%;
+					a{
+						height: 100%;
+						display: block;
+						.wp-post-image{
+							width: auto;
+							height: 100%;
+							max-width: none;
+						}
+					}
+				}
+			}
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 1em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				@include clearfix;
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: .5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+				&.woocommerce-product-gallery--columns-#{$i} {
+					.flex-control-thumbs {
+						li {
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.single_variation_wrap{
+	display: flex;
+	align-items: center;
+	.single_variation{
+		display: flex;
+		align-items: center;
+		.price{
+			width: 100px;
+			height: 100px;
+			order: 1;
+			margin: 0 1rem 0 0;
+			span{
+				font-family: $font__helvetica__cb;
+			}
+		}
+		.woocommerce-variation-description{
+			width : 200px;
+			order: 2;
+		}
+	}
+}
+
+.variations{
+	.label{
+		font-family: $font__helvetica__cb;
+	}
+	select{
+		display: none;
+	}
+	.reset_variations{
+		display: none;
+	}
+	.variation-radios{
+		input{
+			display: none;
+		}
+
+		.label{
+			font-family: $font__helvetica__cb;
+		}
+		label{
+			display: inline-block;
+			font-family: $font__archer__m;
+			padding: .5rem 1rem;
+			border: 1px solid black;
+			cursor: pointer;
+			margin: .5rem 1rem 1rem 0;
+			transition: all .3s ease-in-out;
+			&[checked="checked"]{
+				color: $color__background-body;
+				background: $color__text-main;
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+
+}
+
+
+
+.stock {
+	&:empty:before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.single-product div.product {
+    position: relative;
+    display: flex;
+		flex-flow: column wrap;
+    width: 100%;
+    align-items: center;
+    padding: 90px 0 0 0;
+		height: auto;
+		.woocommerce-product-gallery {
+			figure{
+				.woocommerce-product-gallery__image{
+					a{
+						.wp-post-image{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.wc-summary.entry-summary {
+		    margin-left: 0rem;
+		    z-index: 1;
+		    background: rgba(255, 255, 255, .8);
+		    padding: 2rem;
+		    width: 100%;
+		}
+		.variations{
+			.label{
+				font-family: $font__helvetica__cb;
+			}
+			select{
+				display: none;
+			}
+			.reset_variations{
+				display: none;
+			}
+			.variation-radios{
+				input{
+					display: none;
+				}
+
+				.label{
+					font-family: $font__helvetica__cb;
+				}
+				label{
+					display: inline-block;
+					font-family: $font__archer__m;
+					font-size: .8rem;
+					padding: .5rem .5rem;
+					border: 1px solid black;
+					cursor: pointer;
+					margin: .5rem 1rem 1rem 0;
+					transition: all .3s ease-in-out;
+					&[checked="checked"]{
+						color: $color__background-body;
+						background: $color__text-main;
+						transition: all .3s ease-in-out;
+					}
+				}
+			}
+
+		}
+		.single_variation_wrap{
+			flex-flow: column;
+			margin: 0 0 3rem 0;
+			.woocommerce-variation-add-to-cart{
+				font-size: .8rem;
+				width: 100%;
+				margin-top : 1rem;
+				.btn{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

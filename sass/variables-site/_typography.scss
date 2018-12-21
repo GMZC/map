@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Archer Sbold';
+    src:url('assets/fonts/archer/Archer-Semibold.ttf') format('ttf'),
+        url('assets/fonts/archer/Archer-Semibold.eot') format('eot'),
+        url('assets/fonts/archer/Archer-Semibold.woff2') format('woff2'),
+        url('assets/fonts/archer/Archer-Semibold.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archer Sbold It';
+    src:url('assets/fonts/archer/Archer-SemiboldItalic.ttf') format('ttf'),
+        url('assets/fonts/archer/Archer-SemiboldItalic.eot') format('eot'),
+        url('assets/fonts/archer/Archer-SemiboldItalic.woff2') format('woff2'),
+        url('assets/fonts/archer/Archer-SemiboldItalic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Archer Med';
+    src:url('assets/fonts/archer/Archer-Medium.ttf') format('ttf'),
+        url('assets/fonts/archer/Archer-Medium.eot') format('eot'),
+        url('assets/fonts/archer/Archer-Medium.woff2') format('woff2'),
+        url('assets/fonts/archer/Archer-Medium.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archer Med It';
+    src:url('assets/fonts/archer/Archer-MediumItalic.ttf') format('ttf'),
+        url('assets/fonts/archer/Archer-MediumItalic.eot') format('eot'),
+        url('assets/fonts/archer/Archer-MediumItalic.woff2') format('woff2'),
+        url('assets/fonts/archer/Archer-MediumItalic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica LT Condensed';
+    src: url('assets/fonts/helvetica/HelveticaLT-Condensed-Bold.ttf') format('ttf'),
+        url('assets/fonts/helvetica/HelveticaLT-Condensed-Bold.woff2') format('woff2'),
+        url('assets/fonts/helvetica/HelveticaLT-Condensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica LT';
+    src: url('assets/fonts/helvetica/HelveticaLT-Light.ttf') format('ttf'),
+        url('assets/fonts/helvetica/HelveticaLT-Light.woff2') format('woff2'),
+        url('assets/fonts/helvetica/HelveticaLT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+$font__main: 'Helvetica LT', 'Arial', sans-serif;
+$font__helvetica__cb: 'Helvetica LT Condensed', 'Arial', sans-serif;
+$font__archer__b: 'Archer Sbold', 'Georgia', serif;
+$font__archer__m: 'Archer Med', 'Georgia', serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
