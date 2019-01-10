@@ -440,3 +440,19 @@ function remove_phone_form_fields($fields)
 // {
 //     remove_theme_support('wc-product-gallery-zoom');
 // }
+
+// checkbox d'adhésion dans le cart
+add_action('woocommerce_after_cart_table', 'ajoutAdhesion' );
+
+function ajoutAdhesion() {
+    $product_cart_id = WC()->cart->generate_cart_id(72);
+    $in_cart = WC()->cart->find_product_in_cart($product_cart_id);
+    if (!$in_cart) {
+        ?>
+            <div class="soutien-check">
+                <label for="soutien">Je souhaite adhérer à l'association les amis du MAP et apporter un soutien financier de 15€</label>
+                <input type="checkbox" id="soutien" name="soutien" data-product_id=72>
+            </div>
+        <?php
+    }
+}
