@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('page-content'); ?>>
-<div class="post-thumbnail" style="background:url('<?php the_post_thumbnail_url(); ?>') center center no-repeat/cover">
+<div class="post-thumbnail" style="background:url('<?php the_post_thumbnail_url(); ?>') center center no-repeat; background-size : cover;">
 
 </div>
 
@@ -57,7 +57,7 @@
 						<?php
                             $image = get_field('title_image');
                 if (!empty($image)): ?>
-								<div style="background:url('<?php echo $image['url']; ?>') center center no-repeat/cover">
+								<div style="background:url('<?php echo $image['url']; ?>') center center no-repeat; background-size : cover;">
 								<span class="last-issue-price">2€</span>
 								</div>
 							<?php endif; ?>

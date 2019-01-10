@@ -15,9 +15,10 @@
     $image = get_field('title_image');
     if (!empty($image)):?>
 <div class="left-container">
-	<div class="post-thumbnail" style="background:url('<?php echo $image['url']; ?>') center center no-repeat/cover">
+	<div class="post-thumbnail" style="background:url('<?php echo $image['url']; ?>') center center no-repeat; background-size : cover;">
 		<div class="image-content">
 			<span class="last-issue-price">2€</span>
+			<h2><?php the_title(); ?></h2>
 		</div>
 	</div>
 </div>
@@ -26,7 +27,7 @@
 	<?php endif; ?>
 	<div class="content">
 		<header class="entry-header">
-			<h2><?php the_title(); ?></h2>
+
 			<?php
             if (is_singular()) : ?>
 				<h1><?php the_field('title'); ?></h1>
@@ -130,7 +131,7 @@
                     $map = get_field('map_image');
                     if (!empty($map)):
                 ?>
-				<div class="map-image" style="background:url('<?php echo $map['url']; ?>') center center no-repeat/cover"></div>
+				<div class="map-image" style="background:url('<?php echo $map['url']; ?>') center center no-repeat; background-size : cover;"></div>
 				<?php endif; ?>
 				<div class="map-content">
 							<?php
@@ -144,7 +145,7 @@
                                         if (!empty($artist)):
                                     ?>
 									<div class="image-container">
-											<div class="artist-image" style="background:url('<?php echo $artist['url']; ?>') center center no-repeat/cover"></div>
+											<div class="artist-image" style="background:url('<?php echo $artist['url']; ?>') center center no-repeat; background-size : cover;"></div>
 									</div>
 
 									<?php endif; ?>

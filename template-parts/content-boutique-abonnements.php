@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('boutique-abonnements'); ?>>
 	<header class="entry-header">
-		<div class="post-thumbnail" style="background:url('<?php echo the_post_thumbnail_url(); ?>') center center no-repeat/cover">
+		<div class="post-thumbnail" style="background:url('<?php echo the_post_thumbnail_url(); ?>') center center no-repeat; background-size : cover;">
 		</div>
 		<div class="titre-separateur">
 			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">

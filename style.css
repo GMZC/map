@@ -372,6 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
   margin: -57px 0 -56px 0;
   z-index: 10;
 }
@@ -386,6 +387,7 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   height: 6px;
   background: #fff;
+  left: 0;
 }
 .titre-separateur h2 {
   border-top: 1px solid black;
@@ -405,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
   stroke: #000;
   stroke-width: 1;
 }
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 1200px) {
   .titre-separateur {
     position: relative;
     display: flex;
@@ -421,10 +423,13 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 47.5%;
     z-index: -1;
+    left: 0;
   }
   .titre-separateur h2 {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
     background-color: #fff;
     display: block;
     padding: 0 2rem;
@@ -434,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2rem 0;
     font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   .titre-separateur svg {
     fill: #fff;
@@ -2304,7 +2309,7 @@ a.btn.out-of-stock {
   }
   .qsn.widget-area .widget {
     margin: 0;
-    max-width: 360px;
+    max-width: 640px;
     color: #fff;
   }
   .boutique-widget {
@@ -2631,17 +2636,17 @@ a.btn.out-of-stock {
   padding: 0;
   font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
 }
-.numero_du_mois .intro-numero .content {
-  padding: 0 0 0 3rem;
-  max-width: 600px;
-}
-.numero_du_mois .intro-numero .content h2 {
+.numero_du_mois .intro-numero .post-thumbnail .image-content h2 {
   font-size: 20px;
   margin: 0rem 0 1rem 0rem;
   padding: 0 1rem;
   background: #000;
   display: inline-block;
   color: #fff;
+}
+.numero_du_mois .intro-numero .content {
+  padding: 0 0 0 3rem;
+  max-width: 600px;
 }
 .numero_du_mois .entry-content {
   padding: 0;
@@ -3251,6 +3256,7 @@ hr {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 5rem;
+    padding: 0 2rem;
   }
   .list-content {
     display: -webkit-box;
@@ -3260,8 +3266,9 @@ hr {
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
-    margin: 0;
-    padding: 0;
+    margin: 1rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid #999;
     width: 100%;
   }
   .list-content .image {
@@ -3385,8 +3392,8 @@ hr {
   }
   .numero_du_mois .intro-numero .post-thumbnail .image-content .last-issue-price {
     position: absolute;
-    right: -35px;
-    bottom: 5px;
+    right: 10px;
+    bottom: 10px;
     display: inline-flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -3403,11 +3410,17 @@ hr {
     padding: 0;
     font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
   }
-  .numero_du_mois .intro-numero .content {
-    padding: 0;
-  }
-  .numero_du_mois .intro-numero .content h2 {
+  .numero_du_mois .intro-numero .post-thumbnail .image-content h2 {
     font-size: 20px;
+    margin: 0rem 0 1rem 0rem;
+    padding: 0 1rem;
+    background: #000;
+    display: inline-block;
+    color: #fff;
+  }
+  .numero_du_mois .intro-numero .content {
+    padding: 2rem;
+    margin: 0 auto;
   }
   .numero_du_mois .entry-content {
     padding: 0;

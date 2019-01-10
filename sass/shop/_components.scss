@@ -129,7 +129,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 50px;
+		width: 60px;
 		height: 40px;
 		position: relative;
 		margin: 0;
@@ -139,8 +139,8 @@
 			background: transparent;
 			color: $color__text-main;
 			&:after{
-				width: 75px;
-				height: 75px;
+				width: 85px;
+				height: 85px;
 				transition: all .1s ease-in-out;
 			}
 			svg{
@@ -158,14 +158,20 @@
 			transition: all .1s ease-in-out;
 		}
 		&:before{
-			content: "Panier";
+			// content: "Panier";
 			position: absolute;
 			font-size: .8rem;
 			top: 1rem;
 		}
+		.wording{
+			font-family: $font__helvetica__cb;
+			margin-top: 10px;
+		}
 		.icon{
-			width: 50px;
-			height: 50px;
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			left: 0;
 		}
 		.count{
 			position: absolute;
@@ -511,7 +517,7 @@ a.monCompte{
 	justify-content: center;
 	align-items: center;
 	span{
-		font-family: $font__helvetica__cb;	
+		font-family: $font__helvetica__cb;
 	}
 	.icon{
 		width: 30px;
@@ -528,11 +534,18 @@ a.monCompte{
 
 		a.cart-contents{
 			position: fixed;
-			top: 1.5rem;
+			top: 1rem;
 			right: 1rem;
 			&:hover{
 				background: transparent;
 				color: $color__text-main;
+			}
+			&:after{
+				content: '';
+				display: none;
+			}
+			.wording{
+				margin-top: 30px;
 			}
 		}
 		.widget_shopping_cart {

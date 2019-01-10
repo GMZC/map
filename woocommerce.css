@@ -942,7 +942,7 @@ button[name='update_cart'] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 60px;
   height: 40px;
   position: relative;
   margin: 0;
@@ -954,8 +954,8 @@ button[name='update_cart'] {
   color: #000;
 }
 .site-header-cart a.cart-contents:hover:after {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   transition: all 0.1s ease-in-out;
 }
 .site-header-cart a.cart-contents:hover svg {
@@ -972,14 +972,19 @@ button[name='update_cart'] {
   transition: all 0.1s ease-in-out;
 }
 .site-header-cart a.cart-contents:before {
-  content: "Panier";
   position: absolute;
   font-size: 0.8rem;
   top: 1rem;
 }
+.site-header-cart a.cart-contents .wording {
+  font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+  margin-top: 10px;
+}
 .site-header-cart a.cart-contents .icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
 }
 .site-header-cart a.cart-contents .count {
   position: absolute;
@@ -1276,12 +1281,19 @@ a.monCompte .icon {
   }
   .site-header-cart a.cart-contents {
     position: fixed;
-    top: 1.5rem;
+    top: 1rem;
     right: 1rem;
   }
   .site-header-cart a.cart-contents:hover {
     background: transparent;
     color: #000;
+  }
+  .site-header-cart a.cart-contents:after {
+    content: '';
+    display: none;
+  }
+  .site-header-cart a.cart-contents .wording {
+    margin-top: 30px;
   }
   .site-header-cart .widget_shopping_cart {
     width: 100%;

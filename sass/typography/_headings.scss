@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-flow: row wrap;
 	margin : -57px 0 -56px 0;
 	z-index: 10;
 	&:before{
@@ -22,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     height: 6px;
     background: $color__background-body;
+		left: 0;
 	}
 
 	h2 {
@@ -45,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 1200px) {
 	.titre-separateur {
 	  position: relative;
 		display: flex;
@@ -61,11 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 			position: absolute;
 			top: 47.5%;
 			z-index: -1;
+			left: 0;
 		}
 
 		h2 {
 			border-top: 1px solid black;
 			border-bottom: 1px solid black;
+			border-left: 1px solid white;
+			border-right: 1px solid white;
 			background-color: $color__background-body;
 			display: block;
 			padding: 0 2rem;
@@ -75,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 			margin: 2rem 0;
 			font-family: $font__helvetica__cb;
 			letter-spacing: 2px;
-			font-size: 1rem;
+			font-size: 1.6rem;
 		}
 		svg{
 
