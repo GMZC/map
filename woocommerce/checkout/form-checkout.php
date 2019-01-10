@@ -25,7 +25,9 @@ if (! $checkout->is_registration_enabled() && $checkout->is_registration_require
 }
 
 ?>
-
+<?php if (!is_user_logged_in()) :
+	do_action( 'woocommerce_before_checkout_form', $checkout );
+else: ?>
 <div id="order_review" class="woocommerce-checkout-review-order">
   <?php do_action('woocommerce_checkout_order_review'); ?>
 </div>
@@ -87,7 +89,6 @@ if (! $checkout->is_registration_enabled() && $checkout->is_registration_require
 </table>
 </div>
 <h2 class="entry-title">Vos informations</h2>
-<?php do_action('woocommerce_before_checkout_form', $checkout); ?>
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
   <?php do_action('woocommerce_checkout_before_customer_details'); ?>
   <div class="container-form">
@@ -102,3 +103,4 @@ if (! $checkout->is_registration_enabled() && $checkout->is_registration_require
   <?php do_action('woocommerce_checkout_after_customer_details'); ?>
 </form>
 <?php do_action('woocommerce_after_checkout_form', $checkout); ?>
+<?php endif; ?>

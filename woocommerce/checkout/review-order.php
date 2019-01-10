@@ -24,8 +24,11 @@ if (! defined('ABSPATH')) {
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
-			<th class="product-name"> <h4> <?php _e('Product', 'woocommerce'); ?> </h4> </th>
-			<th class="product-total"> <h4> <?php _e('Total', 'woocommerce'); ?> </h4> </th>
+            <th class="product-thumbnail"> <h4> <?php esc_html_e('Product', 'woocommerce'); ?> </h4> </th>
+            <th class="product-name">&nbsp;</th>
+            <th class="product-price"><h4> <?php esc_html_e('Price', 'woocommerce'); ?> </h4> </th>
+            <th class="product-quantity"><h4> <?php esc_html_e('Quantity', 'woocommerce'); ?> </h4> </th>
+            <th class="product-subtotal"><h4> <?php esc_html_e('Total', 'woocommerce'); ?></h4> </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -33,15 +36,26 @@ if (! defined('ABSPATH')) {
             do_action('woocommerce_review_order_before_cart_contents');
 
             foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
-                $_product     = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
+                $_product   = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
+                $product_id = apply_filters('woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key);
 
-                if ($_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters('woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key)) {
-                    ?>
+                if ($_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters('woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key)) { ?>
 					<tr class="<?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
-						<td class="product-name">
+                        <td class="product-thumbnail">
+    						<?php
+                                $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
+                                echo $thumbnail; // PHPCS: XSS ok.
+                            ?>
+						</td>
+                        <td class="product-name" data-title="<?php esc_attr_e('Product', 'woocommerce'); ?>">
 							<?php echo apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;'; ?>
-							<?php echo apply_filters('woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf('&times; %s', $cart_item['quantity']) . '</strong>', $cart_item, $cart_item_key); ?>
 							<?php echo wc_get_formatted_cart_item_data($cart_item); ?>
+						</td>
+                        <td class="product-price" data-title="<?php esc_attr_e('Price', 'woocommerce'); ?>">
+							<?php echo apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key); // PHPCS: XSS ok.?>
+						</td>
+                        <td class="product-quantity" data-title="<?php esc_attr_e('Quantity', 'woocommerce'); ?>">
+    						<?php echo $cart_item['quantity'] ?>
 						</td>
 						<td class="product-total">
 							<?php echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); ?>
