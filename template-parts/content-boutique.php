@@ -23,7 +23,7 @@
                     $image = get_field('title_image');
                     if (!empty($image) && !empty($title_add_link)):
                         ?>
-						<div class="post-thumbnail" style="background:url('<?php echo $image['url']; ?>') center center no-repeat/cover">
+						<div class="post-thumbnail" style="background:url('<?php echo $image['url']; ?>') center center no-repeat; background-size : cover;">
 
 						</div>
 						<?php endif; ?>

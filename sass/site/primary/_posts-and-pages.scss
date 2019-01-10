@@ -258,20 +258,20 @@
 					font-family: $font__helvetica__cb;
 
 				}
+				h2{
+					font-size: 20px;
+					margin: 0rem 0 1rem 0rem;
+					padding: 0 1rem;
+					background: $color__text-main;
+					display: inline-block;
+					color: $color__background-body;
+				}
 			}
 		}
 
 		.content{
 			padding : 0 0 0 3rem;
 			max-width: 600px;
-			h2{
-				font-size: 20px;
-			  margin: 0rem 0 1rem 0rem;
-				padding: 0 1rem;
-			  background: $color__text-main;
-			  display: inline-block;
-			  color: $color__background-body;
-			}
 
 		}
 	}
@@ -965,6 +965,7 @@ hr {
 		max-width: 1200px;
 		margin: 0 auto;
 		margin-top: 5rem;
+		padding : 0 2rem;
 	}
 
 	.list-content{
@@ -975,8 +976,9 @@ hr {
 		-webkit-box-direction : normal;
 		    -ms-flex-flow : column wrap;
 		        flex-flow : column wrap;
-		margin: 0;
-		padding: 0;
+		margin: 1rem 0;
+		padding: 2rem 0 ;
+		border-bottom: 1px solid #999;
 		width: 100%;
 		.image{
 			margin: 0;
@@ -1105,8 +1107,8 @@ hr {
 					position: relative;
 					.last-issue-price{
 						position: absolute;
-						right: -35px;
-						bottom:5px;
+						right: 10px;
+						bottom:10px;
 						display: inline-flex;
 						-webkit-box-pack: center;
 								-ms-flex-pack: center;
@@ -1124,15 +1126,20 @@ hr {
 						font-family: $font__helvetica__cb;
 
 					}
+					h2{
+						font-size: 20px;
+					  margin: 0rem 0 1rem 0rem;
+						padding: 0 1rem;
+					  background: $color__text-main;
+					  display: inline-block;
+					  color: $color__background-body;
+					}
 				}
 			}
 
 			.content{
-				padding : 0 ;
-				h2{
-					font-size: 20px;
-				}
-
+				padding : 2rem;
+				margin : 0 auto;
 			}
 		}
 

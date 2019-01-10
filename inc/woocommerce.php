@@ -241,6 +241,7 @@ if (! function_exists('map_woocommerce_cart_link')) {
     {
         ?>
 		<a class="cart-contents" href="#" title="<?php esc_attr_e('View your shopping cart', 'map'); ?>">
+      <span class="wording">Panier</span>
 			<?php
                         $item_count_text = sprintf(
                                 /* translators: number of items in the mini cart. */
@@ -369,7 +370,7 @@ remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_sh
 
 function my_woocommerce_widget_shopping_cart_view_cart()
 {
-    echo '<a href="' . esc_url(wc_get_cart_url()) . '" class="wc-forward btn med" target="_blank"><span class="x-anchor-content" style="-webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center;"><span class="x-anchor-text"><span class="x-anchor-text-primary">Commander</span></a>';
+    echo '<a href="' . esc_url(wc_get_cart_url()) . '" class="wc-forward btn med"><span class="x-anchor-content" style="-webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center;"><span class="x-anchor-text"><span class="x-anchor-text-primary">Commander</span></a>';
 }
 add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_view_cart', 10);
 
