@@ -1112,7 +1112,7 @@ button[name='update_cart'] {
   font-weight: 400;
 }
 .star-rating:before {
-  content: "\53\53\53\53\53";
+  content: '\53\53\53\53\53';
   opacity: 0.25;
   float: left;
   top: 0;
@@ -1128,7 +1128,7 @@ button[name='update_cart'] {
   padding-top: 1.5em;
 }
 .star-rating span:before {
-  content: "\53\53\53\53\53";
+  content: '\53\53\53\53\53';
   top: 0;
   position: absolute;
   left: 0;
@@ -1152,34 +1152,34 @@ p.stars a:before {
   width: 1em;
   height: 1em;
   line-height: 1;
-  font-family: "star";
-  content: "\53";
+  font-family: 'star';
+  content: '\53';
   color: #000;
   text-indent: 0;
   opacity: 0.25;
 }
 p.stars a:hover ~ a:before {
-  content: "\53";
+  content: '\53';
   color: #000;
   opacity: 0.25;
 }
 p.stars:hover a:before {
-  content: "\53";
+  content: '\53';
   color: royalblue;
   opacity: 1;
 }
 p.stars.selected a.active:before {
-  content: "\53";
+  content: '\53';
   color: royalblue;
   opacity: 1;
 }
 p.stars.selected a.active ~ a:before {
-  content: "\53";
+  content: '\53';
   color: #000;
   opacity: 0.25;
 }
 p.stars.selected a:not(.active):before {
-  content: "\53";
+  content: '\53';
   color: royalblue;
   opacity: 1;
 }
@@ -1237,6 +1237,9 @@ p.stars.selected a:not(.active):before {
 /**
  * Notices
  */
+.woocommerce-message, .woocommerce-info, .woocommerce-error {
+  display: none !important;
+}
 .woocommerce-message, .woocommerce-info, .woocommerce-error, .woocommerce-noreviews, p.no-comments {
   content: "";
   display: table;
