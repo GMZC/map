@@ -54,6 +54,8 @@
 				<?php $numeros->the_post(); ?>
 				<div class="list-content ">
 					<div class="image">
+						<!-- the_title -->
+						<h4><?php the_title(); ?></h4>
 						<?php
                             $image = get_field('title_image');
                 if (!empty($image)): ?>
@@ -62,9 +64,8 @@
 								</div>
 							<?php endif; ?>
 					</div>
+
 					<div class="texte">
-							<!-- the_title -->
-							<h4><?php the_title(); ?></h4>
 							<!-- intro -->
 							<?php
                                 $numtitle = get_field('title');

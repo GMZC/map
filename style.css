@@ -408,6 +408,9 @@ h1, h2, h3, h4, h5, h6 {
   stroke-width: 1;
 }
 @media screen and (max-width: 1200px) {
+  h3 {
+    font-size: 1.2rem;
+  }
   .titre-separateur {
     position: relative;
     display: flex;
@@ -445,6 +448,50 @@ h1, h2, h3, h4, h5, h6 {
     fill: #fff;
     stroke: #000;
     stroke-width: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .titre-separateur {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -57px 0 -56px 0;
+  }
+  .titre-separateur:before {
+    content: "";
+    width: 100%;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    position: absolute;
+    top: 47.5%;
+    z-index: -1;
+    left: 0;
+  }
+  .titre-separateur h2 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: #fff;
+    display: block;
+    padding: 1rem 2rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .titre-separateur svg {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 1;
+    display: none;
   }
 }
 p {
@@ -2727,6 +2774,18 @@ a.btn.out-of-stock {
   margin: 0 1rem 0 0;
   position: relative;
 }
+.list-content .image h4 {
+  font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+  padding: 0.5rem;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: absolute;
+}
 .list-content .image .last-issue-price {
   position: absolute;
   right: -35px;
@@ -2777,17 +2836,6 @@ a.btn.out-of-stock {
 }
 .list-content .texte .issue-summary ul li {
   padding: 0 0 0.5rem 0;
-}
-.list-content .texte h4 {
-  font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
-  padding: 0.5rem;
-  background: #000;
-  color: #fff;
-  margin: 0;
-  display: inline-block;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 14px;
 }
 .list-content .carto {
   margin: 1rem 0 3rem 0;
@@ -3274,6 +3322,18 @@ hr {
   .list-content .image {
     margin: 0;
   }
+  .list-content .image h4 {
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+  }
   .list-content .image div {
     width: 100%;
     height: 320px;
@@ -3298,17 +3358,6 @@ hr {
   }
   .list-content .texte .issue-summary ul li {
     padding: 0 0 0.5rem 0;
-  }
-  .list-content .texte h4 {
-    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
-    padding: 0.5rem;
-    background: #000;
-    color: #fff;
-    margin: 0;
-    display: inline-block;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 14px;
   }
   .list-content .last-issue-price {
     display: inline-flex;
@@ -3479,6 +3528,477 @@ hr {
   }
   .numero_du_mois .entry-content .issue-artist .artist-info h3 {
     margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-content, .page-content {
+    margin: 5rem 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+  .home-content .post-thumbnail, .page-content .post-thumbnail {
+    height: 360px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .home-content .entry-content, .page-content .entry-content {
+    padding: 2rem;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+  .mini_cart_item .variation {
+    display: none;
+  }
+  .numero_du_mois {
+    padding-top: 3rem;
+  }
+  .numero_du_mois .sommaire {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .numero_du_mois .sommaire .titre-separateur {
+    margin: 0;
+    padding: 0;
+  }
+  .numero_du_mois .sommaire .summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .numero_du_mois .sommaire .summary p {
+    border-right: 1px solid #ccc;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    padding: 0 2rem;
+  }
+  .numero_du_mois .sommaire .summary p strong {
+    font-size: 24px;
+    font-family: 'Helvetica LT', 'Arial', sans-serif;
+  }
+  .numero_du_mois .sommaire .summary p:last-of-type {
+    border: none;
+    padding: 0 2rem;
+  }
+  .numero_du_mois .sommaire .summary p:first-of-type {
+    padding: 0 2rem;
+  }
+  .numero_du_mois .intro-numero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .numero_du_mois .intro-numero div {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  .numero_du_mois .intro-numero .post-thumbnail {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .numero_du_mois .intro-numero .post-thumbnail .image-content {
+    margin: 0 1rem 0 0;
+    position: relative;
+  }
+  .numero_du_mois .intro-numero .post-thumbnail .image-content .last-issue-price {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 0;
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+  }
+  .numero_du_mois .intro-numero .post-thumbnail .image-content h2 {
+    font-size: 20px;
+    margin: 0rem 0 1rem 0rem;
+    padding: 0 1rem;
+    background: #000;
+    display: inline-block;
+    color: #fff;
+  }
+  .numero_du_mois .intro-numero .content {
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .numero_du_mois .entry-content {
+    padding: 0;
+  }
+  .numero_du_mois .entry-content .last-issue-map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+  .numero_du_mois .entry-content .last-issue-map .map-image {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 100%;
+  }
+  .numero_du_mois .entry-content .last-issue-map .map-content {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding: 2rem;
+  }
+  .numero_du_mois .entry-content .issue-artist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+  .numero_du_mois .entry-content .issue-artist .image-container {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 0 0 2rem 0;
+  }
+  .numero_du_mois .entry-content .issue-artist .artist-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .numero_du_mois .entry-content .issue-artist .artist-info {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    margin: 0 0 3rem 0;
+    text-align: center;
+  }
+  .numero_du_mois .entry-content .issue-artist .artist-info h3 {
+    margin: 0;
+  }
+  .numero_du_mois .btn.small {
+    margin: 0;
+    width: 100%;
+  }
+  .numero_du_mois .sommaire .summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+  .numero_du_mois .sommaire .summary p:first-of-type {
+    padding: 0;
+  }
+  .numero_du_mois .sommaire .summary div {
+    border-bottom: 1px solid #ccc;
+    border-right: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: auto;
+    padding: 0 2rem;
+  }
+  .numero_du_mois .sommaire .summary div strong {
+    font-size: 24px;
+    font-family: 'Helvetica LT', 'Arial', sans-serif;
+  }
+  .numero_du_mois .sommaire .summary div:last-of-type {
+    border: none;
+    padding: 0 2rem;
+  }
+  .numero_du_mois .sommaire .summary div:first-of-type {
+    padding: 0 2rem;
+  }
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 0;
+  }
+  .list-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    margin: 1rem 0;
+    padding: 2rem 0;
+    border-bottom: none;
+    width: 100%;
+  }
+  .list-content .image {
+    margin: 0;
+  }
+  .list-content .image h4 {
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+  }
+  .list-content .image div {
+    width: 100%;
+    height: 320px;
+  }
+  .list-content .image div .last-issue-price {
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 0;
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+  }
+  .list-content .texte {
+    padding: 0 2rem;
+  }
+  .list-content .texte h2 a {
+    text-decoration: none;
+    color: #000;
+  }
+  .list-content .texte .image-subtitle .btn {
+    margin-bottom: 2rem;
+  }
+  .list-content .texte .image-subtitle p {
+    text-align: center;
+  }
+  .list-content .texte .image-subtitle p a {
+    text-align: center;
+  }
+  .list-content .texte .issue-summary {
+    display: block;
+  }
+  .list-content .texte .issue-summary h4 {
+    background: none;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+    margin: 0 0 1rem 0;
+    display: block;
+  }
+  .list-content .texte .issue-summary ul {
+    padding: 0;
+  }
+  .list-content .texte .issue-summary ul li {
+    padding: 0;
+  }
+  .actusContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  .actusContainer .actu {
+    width: 100%;
+    margin: 0 1rem;
+    word-wrap: break-word;
+  }
+  .actusContainer .actu h3 a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .actusContainer .actu h3 a:hover {
+    border-bottom: 1px solid #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .actusContainer .actu .actu_thumbnail {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .fscf-input-select {
+    width: 100%;
+  }
+  .page-id-2621 ul.products li.product {
+    max-width: 100%;
+    padding: 0 0 2rem 0;
+  }
+  .page-id-2621 ul.products li.product .image {
+    height: 260px;
+    position: relative;
+    width: 100%;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    bottom: 0rem;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent .texte {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    text-align: left;
+    background: #fff;
+    border: 5px double #000;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent .texte .issue-summary {
+    display: block;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent .texte .issue-summary h4 {
+    background: none;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+    margin: 0 0 1rem 0;
+    display: block;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent .texte .issue-summary ul {
+    padding: 0 0 0 1rem;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent .texte .issue-summary ul li {
+    padding: 0 0 0.5rem 0;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp div.popUpContent h4 {
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .page-id-2621 ul.products li.product .image div.popUp:hover div.popUpContent {
+    opacity: 1;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    bottom: -5rem;
+  }
+  .page-id-2621 ul.products li.product a.btn {
+    margin: 3rem 2rem 0 2rem;
+    border: 1px solid #000;
+    color: #fff;
+  }
+  .page-id-2621 ul.products li.product a.btn:before {
+    display: none;
+  }
+  .page-id-2621 ul.products li.product a.btn:hover {
+    border: 1px solid #000;
+    color: #000;
+  }
+  .page-id-2621 ul.products li.product .last-issue-price {
+    margin-bottom: -35px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 0;
+    font-family: 'Helvetica LT Condensed', 'Arial', sans-serif;
+  }
+  .page-id-2621 .last-issue-map:nth-child(even) {
+    flex-flow: column;
+  }
+  .page-id-2621 .goodies .last-issue-map .map-image {
+    max-width: 100%;
+  }
+  .alt-content {
+    padding: 0 2rem 2rem 2rem;
+  }
+  .alt-content div {
+    padding: 0;
   }
 }
 /*--------------------------------------------------------------
