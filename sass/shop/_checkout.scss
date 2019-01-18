@@ -217,14 +217,21 @@
 	.col-2{
 		width: 50%;
 		label{
-			display: block;
+			display: flex;
+			align-items: center;
+			flex-flow: row wrap;
 		}
 		input{
-			display: block;
+
 			border-radius: 0;
 			border: none;
 			border-bottom: 1px solid black;
-			width: 100%;
+			&[type="text"],
+			&[type="password"],
+			&[type="email"]{
+				width: 100% ;
+			}
+
 		}
 	}
 	.col-1{
@@ -288,7 +295,7 @@
 		}
 	}
 	.col-2{
-		width: 30%;
+		// width: 30%;
 		.woocommerce-additional-fields{
 			width: 100%;
 			.create-account{
@@ -671,6 +678,33 @@ display: none !important;
 			button{
 				margin: 2rem 0;
 			}
+		}
+	}
+
+	#customer_login{
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		padding: 0 1rem;
+		.col-1,
+		.col-2{
+			width: 100%;
+			label{
+
+			}
+			input{
+				border-radius: 0;
+				border: none;
+				border-bottom: 1px solid black;
+				&[type="text"],
+				&[type="password"],
+				&[type="email"]{
+					width: 100% ;
+				}
+			}
+		}
+		.col-1{
+			margin: 0 2rem 0 0;
 		}
 	}
 

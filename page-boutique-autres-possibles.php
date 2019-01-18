@@ -37,5 +37,4 @@ get_header();
 
 <?php
 get_sidebar();
-get_template_part('template-parts/aside', 'map');
 get_footer();

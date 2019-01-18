@@ -781,13 +781,16 @@ ul.products li.product p {
   width: 50%;
 }
 #customer_login .col-1 label, #customer_login .col-2 label {
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
 }
 #customer_login .col-1 input, #customer_login .col-2 input {
-  display: block;
   border-radius: 0;
   border: none;
   border-bottom: 1px solid black;
+}
+#customer_login .col-1 input[type="text"], #customer_login .col-2 input[type="text"], #customer_login .col-1 input[type="password"], #customer_login .col-2 input[type="password"], #customer_login .col-1 input[type="email"], #customer_login .col-2 input[type="email"] {
   width: 100%;
 }
 #customer_login .col-1 {
@@ -844,9 +847,6 @@ ul.products li.product p {
   border-bottom: 1px solid black;
   width: 100%;
   font-family: 'Archer Med', 'Georgia', serif;
-}
-#post-44 .col-2 {
-  width: 30%;
 }
 #post-44 .col-2 .woocommerce-additional-fields {
   width: 100%;
@@ -1161,6 +1161,26 @@ button[name='update_cart'] {
   }
   .woocommerce-cart .place-order button, #post-44 .place-order button {
     margin: 2rem 0;
+  }
+  #customer_login {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  #customer_login .col-1, #customer_login .col-2 {
+    width: 100%;
+  }
+  #customer_login .col-1 input, #customer_login .col-2 input {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  #customer_login .col-1 input[type="text"], #customer_login .col-2 input[type="text"], #customer_login .col-1 input[type="password"], #customer_login .col-2 input[type="password"], #customer_login .col-1 input[type="email"], #customer_login .col-2 input[type="email"] {
+    width: 100%;
+  }
+  #customer_login .col-1 {
+    margin: 0 2rem 0 0;
   }
 }
 /**

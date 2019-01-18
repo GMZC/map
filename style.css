@@ -765,6 +765,11 @@ a.btn.out-of-stock {
   color: #d22626;
   background: #ccc;
 }
+@media screen and (max-width: 768px) {
+  a.btn {
+    margin: 0 0 0 1rem;
+  }
+}
 /*--------------------------------------------------------------
  ## Menus
  --------------------------------------------------------------*/
@@ -3834,6 +3839,7 @@ hr {
   }
   .list-content .texte .image-subtitle p a {
     text-align: center;
+    display: block;
   }
   .list-content .texte .issue-summary {
     display: block;
