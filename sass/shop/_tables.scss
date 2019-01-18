@@ -1,7 +1,7 @@
 /**
  * Shop tables
  */
-table.shop_table_responsive {
+table.shop_table_responsive{
 	thead {
 	}
 
@@ -34,6 +34,9 @@ table.shop_table_responsive {
 				flex-basis: 40%;
 				input{
 
+				}
+				.product-price{
+					margin: 0 1rem 0 0;
 				}
 			}
 
@@ -84,17 +87,16 @@ table.shop_table_responsive {
 			}
 
 			td {
-				display: block;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: center;
 
 				&.product-thumbnail{
-					display: flex;
-					flex-flow: row wrap;
-					align-items: center;
+
 				}
 				&.product-quantity{
-					display: flex;
-					flex-flow: row wrap;
-					align-items: center;
+
 					input{
 
 					}
@@ -121,23 +123,45 @@ table.shop_table_responsive {
 
 		tr {
 			flex-flow: column wrap;
+			align-items: flex-start;
+			padding:  0 1rem;
 			th, td {
 				text-align: left;
 			}
 
 			td {
-				display: block;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: center;
 
 				&.product-thumbnail{
-					display: flex;
-					flex-flow: row wrap;
-					align-items: center;
+					padding: 1rem 0 0 0;
+
+					a{
+						margin: 0 1rem 0 0;
+					}
 				}
 
 				&.product-quantity{
-					width: 20px;
+
+					.product-price{
+						margin: 0 1rem 0 0;
+					}
+					width: 100%;
+					justify-content: space-between;
 					input{
-						width: 20px;
+						text-align: center;
+						max-width: 90px;
+					}
+				}
+
+				&.product-remove{
+					width: 100%;
+					justify-content: space-between;
+					&.remove{
+						width: 50px;
+						height: 50px;
 					}
 				}
 
@@ -146,5 +170,11 @@ table.shop_table_responsive {
 				}
 			}
 		}
+	}
+
+	.cart_totals {
+    width: 100%;
+    text-align: right;
+    padding: 0 1rem;
 	}
 }

@@ -26,7 +26,7 @@ global $product;
     do_action('woocommerce_after_add_to_cart_quantity');
     ?>
 
-	<button type="submit" class="btn small single_add_to_cart_button button alt add_to_cart_button ajax_add_to_cart" data-product_id="2211" data-product_sku>Commander</button>
+	<button type="submit" class="btn small single_add_to_cart_button button alt add_to_cart_button ajax_add_to_cart" data-product_id="2211" data-product_sku>Ajouter au panier</button>
 
 	<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 
