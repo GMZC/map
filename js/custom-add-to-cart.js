@@ -29,20 +29,26 @@ jQuery(function($) {
 
 		var variationId = $('input.variation_id').val();
 		// trying to add a gift on a non empty cart
+		toastr.options = {
+			progressBar: true,
+			positionClass: 'toast-bottom-full-width',
+		};
 		if (isAGift(variationId) && !isEmptyCart()) {
-			alert(
-				"Votre panier contient d'autres produits. Les abonnements que vous offrez doivent faire l'objet d'une commande séparée."
-			);
-			// TODO: put a toaster
+			setTimeout(function() {
+				toastr.error(
+					"Votre panier contient d'autres produits. Les abonnements que vous offrez doivent faire l'objet d'une commande séparée."
+				);
+			}, 100);
 			return false;
 		}
 
 		// trying to add a subscription in a cart already containing one
 		if (subscriptionAlreadyInCart() && isASubscription(clickedButton.data('product_id'))) {
-			alert(
-				'Il y a déjà un abonnement dans votre panier. Merci de compléter une commande par abonnement.'
-			);
-			// TODO: put a toaster
+			setTimeout(function() {
+				toastr.error(
+					'Il y a déjà un abonnement dans votre panier. Merci de compléter une commande par abonnement.'
+				);
+			}, 100);
 			return false;
 		}
 		return true;

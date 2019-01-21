@@ -44,7 +44,7 @@ if ($product->is_in_stock()) : ?>
         do_action('woocommerce_after_add_to_cart_quantity');
         ?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button btn med ajax_add_to_cart button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
+		<button type="submit" name="add-to-cart" data-product_id="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button add_to_cart_button btn med ajax_add_to_cart button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
 
 		<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 	</form>
