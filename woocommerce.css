@@ -1226,6 +1226,33 @@ button[name='update_cart'] {
   display: inline-block;
   width: auto;
 }
+form.cart {
+  display: flex;
+  align-items: center;
+  margin: 0 0 2rem 0;
+}
+form.cart input[type="number"] {
+  width: 70px;
+  text-align: center;
+  margin: 0 1rem 0 0;
+}
+form.cart button {
+  border-style: solid;
+  border-width: 0;
+}
+form.variations_form {
+  display: block;
+  margin: 0 0 2rem 0;
+}
+form.variations_form input[type="number"] {
+  width: 70px;
+  text-align: center;
+  margin: 0 1rem 0 0;
+}
+form.variations_form button {
+  border-style: solid;
+  border-width: 0;
+}
 .woocommerce-MyAccount-navigation-link--customer-logout {
   color: #d22626;
 }
@@ -1595,6 +1622,9 @@ p.stars.selected a:not(.active):before {
 /**
  * Notices
  */
+.woocommerce-message, .woocommerce-info, .woocommerce-error {
+  display: none !important;
+}
 .woocommerce-message, .woocommerce-info, .woocommerce-error, .woocommerce-noreviews, p.no-comments {
   content: "";
   display: table;

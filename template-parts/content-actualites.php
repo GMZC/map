@@ -53,7 +53,7 @@
 <?php
     // Query Arguments
     $args = array(
-    'posts_per_page' => 6,
+    'posts_per_page' => 50,
     'order' => 'DESC',
     'category_name' => 'actualites',
     );

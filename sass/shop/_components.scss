@@ -47,6 +47,41 @@
 	}
 }
 
+
+
+form.cart{
+	display : flex;
+	align-items: center;
+	margin: 0 0 2rem 0;
+
+	input[type="number"]{
+		width: 70px;
+		text-align: center;
+		margin :	0 1rem 0 0;
+	}
+
+	button{
+		border-style: solid;
+		border-width: 0;
+	}
+}
+
+form.variations_form{
+	display : block;
+	margin: 0 0 2rem 0;
+
+	input[type="number"]{
+		width: 70px;
+		text-align: center;
+		margin :	0 1rem 0 0;
+	}
+
+	button{
+		border-style: solid;
+		border-width: 0;
+	}
+}
+
 .woocommerce-MyAccount-navigation-link--customer-logout {
 	color: #d22626;
 }
@@ -475,11 +510,11 @@ p.stars {
 /**
  * Notices
  */
-// .woocommerce-message,
-// .woocommerce-info,
-// .woocommerce-error {
-// 	display: none !important;
-// }
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+	display: none !important;
+}
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,

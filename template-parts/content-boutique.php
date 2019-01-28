@@ -61,7 +61,7 @@
 
 									<?php endif; ?>
 									<?php endif; ?>
-								<p><span class="price">2€</span><a href="<?php echo $url .'?add-to-cart='.$title_add_link; ?>" class="btn med add_to_cart_button ajax_add_to_cart " data-quantity="1" data-product_id="<?php echo $loop->post->ID?>" data-product_sku >Ajouter au panier</a></p>
+								<p><span class="price">2€</span><a href="<?php echo $url .'?add-to-cart='.$title_add_link; ?>" class="btn med add_to_cart_button ajax_add_to_cart " data-quantity="1" data-product_id="<?php echo $title_add_link?>" data-product_sku >Ajouter au panier</a></p>
 							</div><!-- .entry-content -->
 						<?php endwhile;
                 } else {
