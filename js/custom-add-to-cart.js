@@ -8,15 +8,27 @@ jQuery(function($) {
 		// @see: https://stackoverflow.com/questions/11852570/override-woocommerce-frontend-javascript
 
 		var isAGift = function(itemId) {
-			return itemId == 2212 || itemId == 2214 || itemId == 2220 || itemId == 2222;
+			return (
+				itemId == 2212 ||
+				itemId == 2214 ||
+				itemId == 2220 ||
+				itemId == 2222
+			);
 		};
 
 		var isASubscription = function(itemId) {
-			return itemId == 2211 || itemId == 2213 || itemId == 2219 || itemId == 2221;
+			return (
+				itemId == 2211 ||
+				itemId == 2213 ||
+				itemId == 2219 ||
+				itemId == 2221
+			);
 		};
 
 		var isEmptyCart = function() {
-			return $('li.woocommerce-mini-cart-item.mini_cart_item').length === 0;
+			return (
+				$('li.woocommerce-mini-cart-item.mini_cart_item').length === 0
+			);
 		};
 
 		var subscriptionAlreadyInCart = function() {
@@ -43,7 +55,10 @@ jQuery(function($) {
 		}
 
 		// trying to add a subscription in a cart already containing one
-		if (subscriptionAlreadyInCart() && isASubscription(clickedButton.data('product_id'))) {
+		if (
+			subscriptionAlreadyInCart() &&
+			isASubscription(clickedButton.data('product_id'))
+		) {
 			setTimeout(function() {
 				toastr.error(
 					'Il y a déjà un abonnement dans votre panier. Merci de compléter une commande par abonnement.'
@@ -91,13 +106,19 @@ jQuery(function($) {
 			$.each($thisbutton.data(), function(key, value) {
 				data[key] = value;
 			});
+			// remplace le product id si le variation id est présent
+			// (pour les abonnements)
+			var variationId = $('input[name="variation_id"]').val();
+			if (variationId) data.product_id = variationId;
 
 			// Trigger event.
 			$(document.body).trigger('adding_to_cart', [$thisbutton, data]);
 
 			// Ajax action.
 			$.post(
-				wc_add_to_cart_params.wc_ajax_url.toString().replace('%%endpoint%%', 'add_to_cart'),
+				wc_add_to_cart_params.wc_ajax_url
+					.toString()
+					.replace('%%endpoint%%', 'add_to_cart'),
 				data,
 				function(response) {
 					if (!response) {
@@ -110,7 +131,9 @@ jQuery(function($) {
 					}
 
 					// Redirect to cart option
-					if (wc_add_to_cart_params.cart_redirect_after_add === 'yes') {
+					if (
+						wc_add_to_cart_params.cart_redirect_after_add === 'yes'
+					) {
 						window.location = wc_add_to_cart_params.cart_url;
 						return;
 					}
@@ -227,7 +250,12 @@ jQuery(function($) {
 	/**
 	 * Update cart page elements after add to cart events.
 	 */
-	AddToCartHandler.prototype.updateButton = function(e, fragments, cart_hash, $button) {
+	AddToCartHandler.prototype.updateButton = function(
+		e,
+		fragments,
+		cart_hash,
+		$button
+	) {
 		$button = typeof $button === 'undefined' ? false : $button;
 
 		if ($button) {
@@ -258,15 +286,20 @@ jQuery(function($) {
 	 * Update cart page elements after add to cart events.
 	 */
 	AddToCartHandler.prototype.updateCartPage = function() {
-		var page = window.location.toString().replace('add-to-cart', 'added-to-cart');
+		var page = window.location
+			.toString()
+			.replace('add-to-cart', 'added-to-cart');
 
-		$('.shop_table.cart').load(page + ' .shop_table.cart:eq(0) > *', function() {
-			$('.shop_table.cart')
-				.stop(true)
-				.css('opacity', '1')
-				.unblock();
-			$(document.body).trigger('cart_page_refreshed');
-		});
+		$('.shop_table.cart').load(
+			page + ' .shop_table.cart:eq(0) > *',
+			function() {
+				$('.shop_table.cart')
+					.stop(true)
+					.css('opacity', '1')
+					.unblock();
+				$(document.body).trigger('cart_page_refreshed');
+			}
+		);
 
 		$('.cart_totals').load(page + ' .cart_totals:eq(0) > *', function() {
 			$('.cart_totals')
