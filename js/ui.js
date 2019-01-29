@@ -63,7 +63,22 @@
 			positionClass: 'toast-bottom-full-width',
 		};
 		setTimeout(function() {
-			toastr.success($('.woocommerce-message').html());
+			var msg =
+				$('.woocommerce-message').html() ||
+				'Le produit a bien été supprimé du panier.';
+			toastr.success(msg);
+		}, 100);
+	});
+	$(document.body).on('added_to_cart', function() {
+		toastr.options = {
+			progressBar: true,
+			positionClass: 'toast-bottom-full-width',
+		};
+		setTimeout(function() {
+			var msg =
+				$('.woocommerce-message').html() ||
+				'Le produit a bien été ajouté au panier.';
+			toastr.success(msg);
 		}, 100);
 	});
 })(jQuery);
