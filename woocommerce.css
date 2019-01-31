@@ -799,6 +799,9 @@ ul.products li.product p {
 #post-44 .container-form {
   display: flex;
 }
+#post-44 .container-form .col-2 {
+  width: 30%;
+}
 #post-44 #customer_details {
   display: flex;
   width: 70%;
@@ -1385,6 +1388,24 @@ form.variations_form button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.site-header-cart #mini_cart_toggle {
+  text-align: right;
+  display: inline-block;
+}
+.site-header-cart #mini_cart_toggle .cartClose {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.site-header-cart #mini_cart_toggle .icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5 rem;
+}
+.site-header-cart .woocommerce-mini-cart__empty-message {
+  text-align: center;
 }
 .site-header-cart .widget_shopping_cart {
   position: fixed;

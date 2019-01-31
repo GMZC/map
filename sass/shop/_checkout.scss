@@ -242,6 +242,9 @@
 #post-44{
 	.container-form{
 		display: flex;
+		.col-2{
+			width: 30%;
+		}
 	}
 	#customer_details{
 		display: flex;

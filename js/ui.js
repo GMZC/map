@@ -25,6 +25,8 @@
 
 	var cartLink = 'ul#site-header-cart.site-header-cart li a.cart-contents';
 	var cartHeader = 'ul#site-header-cart.site-header-cart';
+  var cartToggle = 'ul#site-header-cart.site-header-cart p#mini_cart_toggle a.cartClose';
+
 	$(document).on('click', cartLink, function(e) {
 		// OK marche
 		e.preventDefault();
@@ -32,6 +34,14 @@
 			.find('.widget')
 			.toggleClass('is-active');
 	});
+
+  $(document).on('click', cartToggle, function(e) {
+    // OK marche
+    e.preventDefault();
+    $(cartHeader)
+      .find('.widget')
+      .removeClass('is-active');
+  });
 
 	var menuToggle = $('.hamburger');
 	menuToggle.click(function() {
@@ -60,7 +70,7 @@
 	$(document.body).on('removed_from_cart', function() {
 		toastr.options = {
 			progressBar: true,
-			positionClass: 'toast-bottom-full-width',
+			positionClass: 'toast-top-right',
 		};
 		setTimeout(function() {
 			var msg =
@@ -72,7 +82,7 @@
 	$(document.body).on('added_to_cart', function() {
 		toastr.options = {
 			progressBar: true,
-			positionClass: 'toast-bottom-full-width',
+			positionClass: 'toast-top-right',
 		};
 		setTimeout(function() {
 			var msg =

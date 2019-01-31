@@ -442,9 +442,10 @@ function remove_phone_form_fields($fields)
 // }
 
 // checkbox d'adhésion dans le cart
-add_action('woocommerce_after_cart_table', 'ajoutAdhesion' );
+add_action('woocommerce_after_cart_table', 'ajoutAdhesion');
 
-function ajoutAdhesion() {
+function ajoutAdhesion()
+{
     $product_cart_id = WC()->cart->generate_cart_id(72);
     $in_cart = WC()->cart->find_product_in_cart($product_cart_id);
     if (!$in_cart) {
@@ -456,3 +457,12 @@ function ajoutAdhesion() {
         <?php
     }
 }
+
+/**
+ * Custom text on the receipt page.
+ */
+function isa_order_received_text($text, $order)
+{
+    return 'C\'est dans la boîte ! Un mail de confirmation vous sera envoyé dès que l\'équipe aura traité votre commande. Merci à vous.';
+}
+add_filter('woocommerce_thankyou_order_received_text', 'isa_order_received_text', 10, 2);

@@ -22,6 +22,14 @@ if (! defined('ABSPATH')) {
 }
 
 do_action('woocommerce_before_mini_cart'); ?>
+  <p id="mini_cart_toggle">
+    <a class="cartClose">
+      <svg class="icon">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+      <span>Fermer</span>
+    </a>
+  </p>
 
 <?php if (! WC()->cart->is_empty()) : ?>
 
